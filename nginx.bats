@@ -40,9 +40,9 @@
     [ $result -eq 403 ]
     result="$(curl -I -s -H 'Host: www.example.com' http://127.0.0.1/maintenance-on | head -n 1 | awk '{print $2}')"
     [ $result -eq 403 ]
-    #result="$(curl -X PROPFIND -i -s -H 'Host: www.example.com' http://127.0.0.1/maintenance-on | head -n 1 | awk '{print $2}')"
-    #[ $result -eq 403 ]
-    #result="$(curl -X POST -d '' -i -s -H 'Host: www.example.com' http://127.0.0.1/maintenance-on | head -n 1 | awk '{print $2}')"
-    #[ $result -eq 403 ]
+    result="$(curl -X PROPFIND -i -s -H 'Host: www.example.com' http://127.0.0.1/maintenance-on | head -n 1 | awk '{print $2}')"
+    [ $result -eq 403 ]
+    result="$(curl -X POST -d '' -i -s -H 'Host: www.example.com' http://127.0.0.1/maintenance-on | head -n 1 | awk '{print $2}')"
+    [ $result -eq 403 ]
 }
 
