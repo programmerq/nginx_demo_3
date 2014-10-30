@@ -7,9 +7,9 @@ You need to have docker installed for this to work. If you are not on linux, boo
 If you are using boot2docker, make sure you have run `boot2docker up` and exported the appropriate `DOCKER_HOST` variable.
 
     # build the container
-    docker build -t bats .
+    docker build -t nginx_demo_3 .
     # launch the container and run the tests
-    docker run -t -i bats /bin/bash -c 'nginx && bats /nginx.bats'
+    docker run -t -i nginx_demo_3 /bin/bash -c 'nginx && bats /nginx.bats'
 
     # all in one shot
-    docker build -t bats . ; docker run -t -i bats /bin/bash -c 'nginx && bats /nginx.bats'
+    docker build -t nginx_demo_3 . ; docker run -t -i nginx_demo_3 /bin/bash -c 'nginx && bats /nginx.bats'
